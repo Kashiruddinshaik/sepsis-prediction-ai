@@ -1,12 +1,11 @@
-from google.colab import files
-
-readme = """# Sepsis Early Warning System
+# Sepsis Early Warning System
 ### Explainable Machine Learning for ICU Clinical Decision Support
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sepsis-prediction-ai.streamlit.app)
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)
-![AUC](https://img.shields.io/badge/AUC--ROC-0.953-brightgreen)
+[![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sepsis-prediction-ai.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://python.org)
+[![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange?logo=xgboost)](https://xgboost.ai)
+[![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.953-brightgreen)](https://sepsis-prediction-ai.streamlit.app)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
 ---
 
@@ -16,9 +15,7 @@ Sepsis is a life-threatening organ dysfunction caused by a dysregulated host res
 
 This project develops and deploys a clinically-oriented machine learning system for **early sepsis prediction**, trained on 40,336 real ICU patients from the PhysioNet/Computing in Cardiology Challenge 2019 dataset. The system achieves an AUC-ROC of 0.953 and integrates SHAP-based explainability to provide transparent, actionable predictions that clinicians can interpret and trust.
 
-A live clinical decision support dashboard is publicly accessible at:
-
-**[https://sepsis-prediction-ai.streamlit.app](https://sepsis-prediction-ai.streamlit.app)**
+**Live Demo →** [https://sepsis-prediction-ai.streamlit.app](https://sepsis-prediction-ai.streamlit.app)
 
 ---
 
@@ -45,8 +42,6 @@ This system is designed with two principles in mind:
 | Measurement frequency | Hourly |
 | Sepsis definition | Sepsis-3 |
 | Sepsis prevalence | 1.80% |
-
-The dataset includes time-dependent variables such as heart rate, oxygen saturation, temperature, blood pressure, respiratory rate, lactate, creatinine, WBC count, and 32 additional laboratory and demographic features.
 
 ---
 
@@ -96,6 +91,7 @@ SHAP (SHapley Additive exPlanations) TreeExplainer was applied to a 5,000-patien
 ---
 
 ## Project Structure
+
 ```
 sepsis-prediction-ai/
 ├── dashboard.py          # Streamlit clinical decision support application
@@ -111,12 +107,11 @@ sepsis-prediction-ai/
 | Component | Technology |
 |-----------|-----------|
 | Language | Python 3.12 |
-| ML Framework | XGBoost 2.x |
+| ML Framework | XGBoost |
 | Explainability | SHAP |
 | Dashboard | Streamlit |
 | Data Processing | Pandas, NumPy |
 | Visualization | Matplotlib, Seaborn |
-| Environment | Google Colab |
 
 ---
 
@@ -124,22 +119,18 @@ sepsis-prediction-ai/
 
 - The model was trained and evaluated on a single challenge dataset; external validation on independent hospital cohorts is required before clinical deployment
 - The current implementation does not model temporal dependencies across patient time steps; future work will explore LSTM and Transformer architectures for sequential modelling
-- Fairness analysis across demographic subgroups (age, gender, ethnicity) has not been conducted and represents an important area for further investigation
+- Fairness analysis across demographic subgroups has not been conducted and represents an important area for further investigation
 
 ---
 
 ## Author
 
-**Kashiruddin Shaik**  
-[LinkedIn](https://www.linkedin.com/in/kashiruddin-shaik/) · [GitHub](https://github.com/Kashiruddinshaik) · [Portfolio](https://kashiruddinshaik.github.io/new_portfolio/)
+**Kashiruddin Shaik**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kashiruddin-shaik/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github&logoColor=white)](https://github.com/Kashiruddinshaik)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-c9a84c?logo=google-chrome&logoColor=white)](https://kashiruddinshaik.github.io/new_portfolio/)
 
 ---
 
 *This project is intended for research and educational purposes. Clinical deployment requires prospective validation, regulatory approval, and institutional review.*
-"""
-
-with open('/content/README.md', 'w') as f:
-    f.write(readme)
-
-files.download('/content/README.md')
-print('README.md downloaded!')
