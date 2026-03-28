@@ -129,7 +129,7 @@ sepsis-prediction-ai/
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kashiruddin-shaik/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github&logoColor=white)](https://github.com/Kashiruddinshaik)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-c9a84c?logo=google-chrome&logoColor=white)](https://kashiruddinshaik.github.io/new_portfolio/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-c9a84c?logo=google-chrome&logoColor=white)](https://kashiruddinshaik.github.io/Portfolio/)
 
 ---
 
